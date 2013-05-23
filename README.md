@@ -5,7 +5,36 @@ A maven project for distributing PostgresQL binaries as Maven artifacts.
 9.2.4 was already published to Maven Central.
 Older versions could be published as well.
 
-Usage example:
+Simple usage example (windows):
+
+    <plugin>
+		<artifactId>maven-dependency-plugin</artifactId>
+		<version>2.6</version>
+		<executions>
+			<execution>
+				<id>unpack-postgresql</id>
+				<phase>pre-integration-test</phase>
+				<goals>
+					<goal>unpack</goal>
+				</goals>
+				<configuration>
+					<artifactItems>
+						<artifactItem>
+							<groupId>com.github.adrianboimvaser</groupId>
+							<artifactId>postgresql-dist</artifactId>
+							<classifier>windows</classifier>
+							<version>9.2.4</version>
+							<type>zip</type>
+							<overWrite>true</overWrite>
+							<outputDirectory>${project.build.directory}</outputDirectory>
+						</artifactItem>
+					</artifactItems>
+				</configuration>
+			</execution>
+		</executions>
+	</plugin>
+
+Complex usage example (let the build choose the platform):
 
     <profiles>
 		<profile>
