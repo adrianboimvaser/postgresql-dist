@@ -98,10 +98,10 @@ Usage example:
 									<skip>${skipITs}</skip>
 									<artifactItems>
 										<artifactItem>
-											<groupId>org.postgresql</groupId>
+											<groupId>com.github.adrianboimvaser</groupId>
 											<artifactId>postgresql-dist</artifactId>
 											<classifier>${postgresql-dist.classifier}</classifier>
-											<version>9.2.4-1</version>
+											<version>9.2.4</version>
 											<type>${postgresql-dist.type}</type>
 											<overWrite>true</overWrite>
 											<outputDirectory>${project.build.directory}</outputDirectory>
@@ -161,10 +161,10 @@ Usage example:
 									<skip>${skipITs}</skip>
 									<artifactItems>
 										<artifactItem>
-											<groupId>org.postgresql</groupId>
+											<groupId>com.github.adrianboimvaser</groupId>
 											<artifactId>postgresql-dist</artifactId>
 											<classifier>${postgresql-dist.classifier}</classifier>
-											<version>9.2.4-1</version>
+											<version>9.2.4</version>
 											<type>${postgresql-dist.type}</type>
 											<overWrite>true</overWrite>
 											<outputDirectory>${project.build.directory}</outputDirectory>
